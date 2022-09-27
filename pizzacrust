@@ -1,0 +1,22 @@
+import java.util.*;
+public class pizza2{
+    public static void main(String[] args){
+        Scanner scnr = new Scanner(System.in);
+        int pizzaRadius = scnr.nextInt();
+        int crustRadius = scnr.nextInt();
+        
+        if(crustRadius >= pizzaRadius){
+            System.out.println("0.000000000");
+            return;
+        }
+        
+        double pizzaArea = Math.PI * Math.pow(pizzaRadius,2);
+        double cheeseArea = Math.PI * Math.pow(pizzaRadius-crustRadius,2);
+        
+        double percentOf = ((cheeseArea/pizzaArea))*100;
+        
+        System.out.println(percentOf);
+    }
+    
+    
+}
